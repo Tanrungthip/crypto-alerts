@@ -1,8 +1,7 @@
-<div class="container align-center">
-  <%= simple_form_for @price_alert do |f| %>
-    <%= f.input :cryptocurrency %>
-    <%= f.input :price %>
-    <%= f.input :fiatcurrency %><br>
-    <%= f.button :submit, class: 'btn btn-primary' %>
-  <% end %>
-</div>
+<%= simple_form_for @price_alert do |f| %>
+  <h4>Set Crypto Price Alert</h4>
+  <%= f.input :cryptocurrency %>
+  <%= f.input :price %>
+  <%= f.input :fiatcurrency %><br>
+  <%= f.button :submit, class: 'btn btn-dark' %>
+<% end %>
