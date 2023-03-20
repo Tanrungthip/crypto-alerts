@@ -3,7 +3,7 @@
   <ul>
     <% @price_alerts.each do |price| %>
       <li><%= link_to price_alert_path(price), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this #{price.cryptocurrency}?" }, class: 'text-gray text-decoration-none' do %>
-          <i class="fa-regular fa-calendar-minus fa-2xs"></i>
+          <i class="fa-brands fa-bitcoin"></i>
           <%= price.cryptocurrency %>
           <%= price.price %>
           <%= price.fiatcurrency %>
