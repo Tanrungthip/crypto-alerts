@@ -1,0 +1,16 @@
+<div class="container">
+  <h3>Your Price Alerts</h3>
+  <ul>
+    <% @price_alerts.each do |price| %>
+      <li><%= link_to price_alert_path(price), data: {turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this #{price.cryptocurrency}?" }, class: 'text-gray text-decoration-none' do %>
+          <i class="fa-regular fa-calendar-minus fa-2xs"></i>
+          <%= price.cryptocurrency %>
+          <%= price.price %>
+          <%= price.fiatcurrency %>
+        </li>
+      <% end %>
+    <% end %>
+  </ul>
+  <p>Set a new price alert</p>
+  <%= link_to 'Set Alert', new_price_alert_path, class: 'btn btn-dark' %>
+</div>
