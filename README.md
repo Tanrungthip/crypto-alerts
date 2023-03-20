@@ -35,6 +35,13 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
     </form>
 
 
+ <div class="social-container">
+        <h1>Sign in</h1>
+        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
